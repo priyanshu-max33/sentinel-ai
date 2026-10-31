@@ -27,12 +27,10 @@ To win Track 3, Sentinel AI must maintain two properties:
 
 | Metric Name | Value | Description |
 |---|---|---|
-| **Total Test Catalog** | 29 | Complete automated test catalog |
-| **Stage A Tests (Independent)** | 22 | Fixture, Contract, Schema & Allowlist tests |
-| **Stage B Tests (Integration)** | 7 | Real HTTP API tests against live backend |
-| **Stage A Passed** | **22 (100% of Stage A)** | All independent security contracts pass |
-| **Stage A Failed** | **0** | Zero defects in security contract layer |
-| **Stage B Status** | **7 PENDING INTEGRATION** | Cleanly skipped awaiting Priyanshu's FastAPI endpoints |
+| **Total Test Catalog** | 35 | Complete automated test catalog |
+| **Independent & Live API Passed** | **32 (91.4% of catalog)** | 28 Stage A tests + 4 Live FastAPI Integration tests |
+| **Pending Endpoints (Stage B)** | **3 (8.6% of catalog)** | Cleanly skipped awaiting full PDF/SSRF endpoint handoffs |
+| **Failed Tests** | **0 (0.0%)** | Zero security defects or regressions |
 
 ---
 

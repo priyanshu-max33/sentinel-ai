@@ -57,7 +57,16 @@ def test_filesystem_sandbox_path_traversal_prevention(policy_engine, sample_data
 
 
 @pytest.mark.integration
-def test_backend_live_tool_authorization():
-    """Stage B Backend Integration Test."""
-    pytest.skip("Backend server not running at http://localhost:8000. Stage B integration pending Priyanshu handoff.")
+def test_backend_live_tool_authorization(backend_client):
+    """
+    Stage B Backend Integration Test:
+    Asserts live POST /api/actions/check rejects forbidden tools at the Pydantic schema gate.
+    """
+    payload = {
+        "tool": "execute_shell",
+        "params": {"cmd": "cat /etc/passwd"}
+    }
+    response = backend_client.post("/api/actions/check", json=payload)
+    # Pydantic enum validation strictly returns 422 Unprocessable Entity
+    assert response.status_code == 422
 

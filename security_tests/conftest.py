@@ -145,3 +145,14 @@ class PolicyEngineContract:
 def policy_engine():
     return PolicyEngineContract
 
+
+@pytest.fixture
+def backend_client():
+    """
+    Stage B Fixture: Provides an in-memory FastAPI test client directly
+    targeting Priyanshu's backend application.
+    """
+    from fastapi.testclient import TestClient
+    from backend.app.main import app
+    return TestClient(app)
+

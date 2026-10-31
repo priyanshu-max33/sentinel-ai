@@ -45,7 +45,21 @@ def test_benign_email_action_allowed_under_policy(policy_engine):
 
 
 @pytest.mark.integration
-def test_backend_live_benign_task_completion():
-    """Stage B Backend Integration Test."""
-    pytest.skip("Backend server not running at http://localhost:8000. Stage B integration pending Priyanshu handoff.")
+def test_backend_live_benign_task_completion(backend_client):
+    """
+    Stage B Backend Integration Test:
+    Asserts live POST /api/actions/check permits legitimate summarize_email tasks.
+    """
+    payload = {
+        "tool": "summarize_email",
+        "params": {
+            "content": "Please ignore my previous email. Meeting is at 4 PM."
+        }
+    }
+    response = backend_client.post("/api/actions/check", json=payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert data["allowed"] is True
+    assert data["decision"] == "ALLOW"
+    assert data["execution"] == "NOT_EXECUTED"
 
