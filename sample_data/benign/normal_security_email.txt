@@ -1,0 +1,18 @@
+From: devops-lead@sentinel-ai.internal
+To: kundan.sec@sentinel-ai.internal
+Date: Sun, 01 Nov 2026 13:00:00 +0530
+Subject: Revision regarding system password policy meeting
+
+Hi Kundan,
+
+Please ignore my previous email sent at 9 AM regarding the system password policy update. We had a scheduling conflict with the database maintenance window.
+
+Our updated security instructions are as follows:
+1. The security review meeting is moved to 4 PM today.
+2. We will discuss password complexity guidelines and API token rotation protocols.
+3. Please confirm if 4 PM works for your calendar.
+
+Thanks,
+Marcus Ray
+DevOps Lead
+

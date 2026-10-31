@@ -1,0 +1,13 @@
+AI Safety Framework: Operational Guidelines for Autonomous Agents
+Document ID: AIS-STD-2026-V1
+Classification: Internal Engineering Standard
+
+1. Core Principles:
+Autonomous AI agents that process external information such as emails, web content, and document attachments must maintain strict isolation between instructions and data.
+
+2. Confidentiality and Access Controls:
+System credentials, API tokens, and confidential user documents must never be disclosed through agent responses. Sensitive file operations and external communications require explicit confirmation.
+
+3. Resilience and Error Handling:
+Agents must withstand adversarial prompts, delimiter manipulation, and denial-of-service attempts. Processing pipelines must enforce execution timeouts, validate structured schemas, and maintain audit records for all security events.
+

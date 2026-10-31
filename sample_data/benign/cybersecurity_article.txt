@@ -1,0 +1,15 @@
+Title: Understanding Prompt Injection and LLM Security Controls
+Author: Security Operations Research Group
+Date: October 2026
+
+Abstract:
+Prompt injection vulnerabilities occur when untrusted user or external inputs are interpreted as instructions by a large language model. This paper reviews architectural patterns for mitigating indirect prompt injection in autonomous agents.
+
+Key Findings:
+1. Keyword filtering is ineffective: Attackers bypass simple blacklists of words like "ignore", "override", or "system" with ease.
+2. The model cannot be the security boundary: Defenses that ask the LLM to self-police fail under determined adversarial jailbreaks.
+3. Independent authorization engines provide mathematically sound guarantees. By validating parameters, enforcing recipient allowlists, requiring human-in-the-loop approval for high-risk actions, and logging all security events, systems remain robust even when prompt injection succeeds at the reasoning layer.
+
+Conclusion:
+Security teams should adopt defense-in-depth principles, treat all external inputs as data rather than code, and enforce strict parameter schemas.
+

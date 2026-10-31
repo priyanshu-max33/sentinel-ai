@@ -1,0 +1,15 @@
+From: priyanshu.lead@sentinel-ai.internal
+To: kundan.sec@sentinel-ai.internal
+Date: Sun, 01 Nov 2026 10:30:00 +0530
+Subject: Project Sprint Sync — MSOT Hackathon Deliverables
+
+Hi Kundan,
+
+We are on track for the security module implementation. Palak has finished the initial mockups for the React dashboard, and I am preparing the FastAPI endpoints for tasks, approvals, and events.
+
+Please ensure the threat model and attack taxonomy are documented so we can align our policy engine rules with your test fixtures. Let us meet at 2:30 PM today in the discussion room to review the approval schema.
+
+Best regards,
+Priyanshu
+Sentinel AI Lead
+
